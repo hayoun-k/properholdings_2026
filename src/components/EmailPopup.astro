@@ -1,0 +1,151 @@
+---
+---
+
+<div class="email-popup" id="emailPopup">
+  <div class="popup-content">
+    <button class="popup-close" id="popup-close-btn">✕</button>
+    <h3>Reserve Your Stay</h3>
+    <p>
+      Join our curated collection. Receive exclusive rates, early access to premium residences, and
+      white-glove booking service.
+    </p>
+    <form class="popup-form" id="popup-form">
+      <input type="text" class="popup-input" placeholder="Your full name" required />
+      <input type="email" class="popup-input" placeholder="your@email.com" required />
+      <input type="tel" class="popup-input" placeholder="Phone number (optional)" />
+      <button type="submit" class="popup-btn">Book Now</button>
+    </form>
+  </div>
+</div>
+
+<style>
+  .email-popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.4s ease;
+  }
+
+  .email-popup.active {
+    display: flex;
+  }
+
+  .popup-content {
+    background: var(--white);
+    padding: 80px 70px;
+    border-radius: 2px;
+    max-width: 540px;
+    position: relative;
+    animation: slideUp 0.4s ease;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
+    border: 1px solid #e0dcd8;
+  }
+
+  .popup-close {
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--gray);
+    transition: color 0.3s;
+  }
+
+  .popup-close:hover {
+    color: var(--charcoal);
+  }
+
+  .popup-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 40px;
+    color: var(--charcoal);
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+
+  .popup-content p {
+    font-size: 15px;
+    color: var(--dark-gray);
+    line-height: 1.85;
+    margin-bottom: 36px;
+  }
+
+  .popup-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .popup-input {
+    padding: 14px 20px;
+    border: 1px solid #d0ccc8;
+    border-radius: 2px;
+    font-size: 14px;
+    font-family: 'Lora', serif;
+    transition: all 0.3s;
+    color: var(--charcoal);
+    background: var(--white);
+  }
+
+  .popup-input:focus {
+    outline: none;
+    border-color: var(--charcoal);
+    background: var(--cream);
+  }
+
+  .popup-btn {
+    background: var(--charcoal);
+    color: white;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 8px;
+  }
+
+  .popup-btn:hover {
+    background: var(--gold);
+    color: var(--charcoal);
+  }
+
+  @media (max-width: 768px) {
+    .popup-content { padding: 60px 36px; }
+  }
+</style>
+
+<script>
+  function openEmailPopup() {
+    document.getElementById('emailPopup')?.classList.add('active');
+  }
+
+  function closeEmailPopup() {
+    document.getElementById('emailPopup')?.classList.remove('active');
+  }
+
+  (window as any).openEmailPopup = openEmailPopup;
+  (window as any).closeEmailPopup = closeEmailPopup;
+
+  document.getElementById('popup-close-btn')?.addEventListener('click', closeEmailPopup);
+
+  document.getElementById('emailPopup')?.addEventListener('click', function (e) {
+    if (e.target === this) closeEmailPopup();
+  });
+
+  document.getElementById('popup-form')?.addEventListener('submit', function (e) {
+    e.preventDefault();
+    alert('Thank you for your interest. Our team will contact you shortly with exclusive rates and availability.');
+    closeEmailPopup();
+  });
+</script>

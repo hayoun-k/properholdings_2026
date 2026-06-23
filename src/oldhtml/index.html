@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proper Holdings — Corporate Housing, Elevated</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,500&family=Montserrat:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- BOOKING MODAL -->
+<div class="booking-modal" id="bookingModal" aria-modal="true" role="dialog" aria-label="Choose how to book">
+  <div class="bm-overlay" id="bmOverlay"></div>
+  <div class="bm-box">
+    <button class="bm-close" id="bmClose" aria-label="Close">✕</button>
+    <div class="bm-eyebrow">Book Your Stay</div>
+    <h3 class="bm-title">How would you like<br>to <em>book?</em></h3>
+    <p class="bm-sub">Pick a platform below, or contact us directly for corporate or extended-stay rates.</p>
+    <div class="bm-options">
+      <a href="#" class="bm-option">
+        <div class="bm-option-left">
+          <div class="bm-platform-name">Airbnb</div>
+          <div class="bm-platform-sub">Instant booking · All properties</div>
+        </div>
+        <span class="bm-arrow">→</span>
+      </a>
+      <a href="#" class="bm-option">
+        <div class="bm-option-left">
+          <div class="bm-platform-name">VRBO</div>
+          <div class="bm-platform-sub">Extended stays · Verified listings</div>
+        </div>
+        <span class="bm-arrow">→</span>
+      </a>
+      <a href="#" class="bm-option">
+        <div class="bm-option-left">
+          <div class="bm-platform-name">FurnishedFinder</div>
+          <div class="bm-platform-sub">Best for 30+ night corporate stays</div>
+        </div>
+        <span class="bm-arrow">→</span>
+      </a>
+      <a href="corporate.html#contact" class="bm-option bm-option--gold">
+        <div class="bm-option-left">
+          <div class="bm-platform-name">Contact Us Directly</div>
+          <div class="bm-platform-sub">Best rates · Response within 2 hours</div>
+        </div>
+        <span class="bm-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- STICKY BOOK CTA -->
+<button class="sticky-book" id="stickyBook" aria-label="Book a Stay">Book a Stay</button>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="/index.html" class="nav-logo">Proper<span>.</span> Holdings</a>
+  <ul class="nav-links">
+    <li><a href="#properties">Properties</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="corporate.html">Corporate</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+    <li><a href="corporate.html#contact">Contact</a></li>
+  </ul>
+  <a href="#book" class="nav-cta" onclick="openBookingModal(); return false;">Book a Stay</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Los Angeles · Furnished Corporate Housing</div>
+
+    <h1 class="hero-headline">
+      Where professionals<br>
+      call <em>home.</em>
+    </h1>
+
+    <p class="hero-sub">
+      Fully furnished, move-in ready residences designed for the executive, the relocating professional, and the extended-stay traveler.
+    </p>
+
+    <div class="booking-container">
+      <div class="hero-booking">
+        <div class="booking-field">
+          <label class="booking-label">Arrive</label>
+          <input type="date" class="booking-input" id="arrive-date">
+        </div>
+        <div class="booking-divider"></div>
+        <div class="booking-field">
+          <label class="booking-label">Depart</label>
+          <input type="date" class="booking-input" id="depart-date">
+        </div>
+        <div class="booking-divider"></div>
+        <div class="booking-field">
+          <label class="booking-label">Guests</label>
+          <input type="number" class="booking-input" id="guests" min="1" max="16" placeholder="1">
+        </div>
+        <button class="booking-btn" onclick="openBookingModal()">Book Now</button>
+      </div>
+      <p class="hero-corporate">Corporate Partnerships? <a href="/corporate.html" class="booking-corp-link">Click Here</a></p>
+    </div>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">98%</div>
+        <div class="stat-label">Occupancy Rate</div>
+      </div>
+      <div class="stat">
+        <a href="#testimonials" style="text-decoration:none;">
+          <div class="stat-num">5★</div>
+          <div class="stat-label">Guest Satisfaction</div>
+        </a>
+      </div>
+      <div class="stat">
+        <div class="stat-num">142+</div>
+        <div class="stat-label">Verified Reviews</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">LA</div>
+        <div class="stat-label">Based &amp; Operated</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="corner-mark tl"></div>
+    <div class="corner-mark tr"></div>
+    <div class="corner-mark bl"></div>
+    <div class="corner-mark br"></div>
+  </div>
+</section>
+
+<div class="gold-line"></div>
+
+<!-- SOCIAL PROOF TICKER -->
+<div class="proof-ticker" aria-hidden="true">
+  <div class="proof-track">
+    <span class="proof-item"><span class="proof-stars">★★★★★</span> "The best corporate housing I've experienced in LA." — James O., Finance Director</span>
+    <span class="proof-sep">·</span>
+    <span class="proof-item"><span class="proof-stars">★★★★★</span> "It genuinely feels like home." — Priya M., HR Director</span>
+    <span class="proof-sep">·</span>
+    <span class="proof-item"><span class="proof-stars">★★★★★</span> "Immaculate, fully stocked, and Tolani was responsive throughout." — Marcus T., Travel Nurse</span>
+    <span class="proof-sep">·</span>
+    <span class="proof-item"><span class="proof-stars">★★★★★</span> "Communication was five-star from day one." — James O., Finance Director</span>
+    <span class="proof-sep">·</span>
+    <span class="proof-item"><span class="proof-stars">★★★★★</span> "We use Proper Holdings for all our LA relocations now." — Priya M., HR Director</span>
+    <span class="proof-sep">·</span>
+    <span class="proof-item"><span class="proof-stars">★★★★★</span> "The best corporate housing I've experienced in LA." — James O., Finance Director</span>
+    <span class="proof-sep">·</span>
+    <span class="proof-item"><span class="proof-stars">★★★★★</span> "It genuinely feels like home." — Priya M., HR Director</span>
+    <span class="proof-sep">·</span>
+    <span class="proof-item"><span class="proof-stars">★★★★★</span> "Immaculate, fully stocked, and Tolani was responsive throughout." — Marcus T., Travel Nurse</span>
+    <span class="proof-sep">·</span>
+    <span class="proof-item"><span class="proof-stars">★★★★★</span> "Communication was five-star from day one." — James O., Finance Director</span>
+    <span class="proof-sep">·</span>
+    <span class="proof-item"><span class="proof-stars">★★★★★</span> "We use Proper Holdings for all our LA relocations now." — Priya M., HR Director</span>
+    <span class="proof-sep">·</span>
+  </div>
+</div>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div style="text-align:center;" class="reveal">
+    <div class="section-eyebrow section-eyebrow--center">Guest Experiences</div>
+    <h2 class="section-title">Experiences from our<br><em>valued guests</em></h2>
+  </div>
+
+  <div class="testimonials-grid reveal" id="testimonialsGrid">
+
+    <div class="testimonial-card">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-text">"Stayed for 60 days during a hospital assignment at Cedars-Sinai. The apartment was immaculate and had everything I needed. Tolani was responsive and professional throughout. Would absolutely book again."</p>
+      <div class="t-author">
+        <div class="t-name">Marcus T.</div>
+        <div class="t-role">Travel Nurse · ICU Specialist</div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-text">"My company uses Proper Holdings for all our LA relocations now. The level of quality and consistency is unmatched compared to other furnished housing we've used. It genuinely feels like home."</p>
+      <div class="t-author">
+        <div class="t-name">Priya M.</div>
+        <div class="t-role">HR Director · Tech Company</div>
+      </div>
+    </div>
+
+    <div class="testimonial-card">
+      <div class="t-stars">★★★★★</div>
+      <p class="t-text">"The apartment was beautifully furnished, the neighborhood was ideal, and the communication was five-star from day one. I've stayed at a lot of corporate housing — this is the best I've experienced in LA."</p>
+      <div class="t-author">
+        <div class="t-name">James O.</div>
+        <div class="t-role">Consulting Director · Finance</div>
+      </div>
+    </div>
+
+  </div>
+  <div class="swipe-dots" id="testimonialDots"></div>
+</section>
+
+<div class="gold-line"></div>
+
+<!-- PROPERTIES -->
+<section id="properties">
+  <div class="properties-header reveal">
+    <div>
+      <div class="section-eyebrow">Our Portfolio</div>
+      <h2 class="section-title">Curated <em>residences</em></h2>
+    </div>
+    <p>Every Proper Holdings unit is personally selected, designed, and managed — delivering a seamless, hotel-quality experience in a private residential setting.</p>
+  </div>
+
+  <div class="carousel-rows">
+
+    <!-- Row 1 — scrolls left -->
+    <div class="carousel-row">
+      <div class="carousel-track">
+        <div class="carousel-item"><img src="assets/images/properties/Screenshot%202026-04-06%20at%2001.56.56.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_7203.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0251.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0247.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0240.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0256.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0237.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0236.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0257.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0239.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0254.webp" alt=""></div>
+        <!-- duplicate for seamless loop -->
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/Screenshot%202026-04-06%20at%2001.56.56.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_7203.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0251.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0247.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0240.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0256.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0237.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0236.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0257.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0239.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0254.webp" alt=""></div>
+      </div>
+    </div>
+
+    <!-- Row 2 — scrolls right -->
+    <div class="carousel-row">
+      <div class="carousel-track carousel-track--reverse">
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0242.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0258.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0243.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0255.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0248.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0252.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0244.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0245.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0253.webp" alt=""></div>
+        <div class="carousel-item"><img src="assets/images/properties/IMG_0249.webp" alt=""></div>
+        <!-- duplicate for seamless loop -->
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0242.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0258.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0243.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0255.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0248.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0252.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0244.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0245.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0253.webp" alt=""></div>
+        <div class="carousel-item" aria-hidden="true"><img src="assets/images/properties/IMG_0249.webp" alt=""></div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="properties-tagline reveal">work from a quiet home office &nbsp;·&nbsp; cook in a fully equipped kitchen &nbsp;·&nbsp; sleep on hotel-quality linens</p>
+</section>
+
+<div class="gold-line"></div>
+
+<!-- NEIGHBORHOODS -->
+<section id="neighborhoods" style="background: linear-gradient(to bottom, var(--off-white) 0%, var(--cream) 100%);">
+  <div class="section-header reveal">
+    <div class="section-eyebrow section-eyebrow--center">Los Angeles Neighborhoods</div>
+    <h2 class="section-title">Discover your<br><em>perfect neighborhood</em></h2>
+    <p class="section-desc">Each neighborhood offers its own character, culture, and lifestyle. We help you find the community that matches your vision.</p>
+  </div>
+
+  <div class="neighborhoods-grid reveal">
+    <div class="neighborhood-card">
+      <h3 class="neighborhood-name">Beverly Hills</h3>
+      <div class="neighborhood-meta">Iconic Luxury · Timeless Elegance</div>
+      <p class="neighborhood-desc">Where prestige meets sophistication. Beverly Hills offers world-class dining, exceptional shopping on Rodeo Drive, and architectural grandeur.</p>
+      <div class="neighborhood-highlights">
+        <div class="highlight">Michelin-starred restaurants and exclusive venues</div>
+        <div class="highlight">Proximity to entertainment industry epicenter</div>
+        <div class="highlight">Iconic cultural institutions and galleries</div>
+        <div class="highlight">Epitome of Los Angeles luxury</div>
+      </div>
+    </div>
+
+    <div class="neighborhood-card">
+      <h3 class="neighborhood-name">West Hollywood</h3>
+      <div class="neighborhood-meta">Creative Pulse · Vibrant Culture</div>
+      <p class="neighborhood-desc">The artistic heart of Los Angeles pulses with creative energy. Trendy restaurants, galleries, and entertainment venues define this walkable community.</p>
+      <div class="neighborhood-highlights">
+        <div class="highlight">Thriving nightlife and entertainment ecosystem</div>
+        <div class="highlight">Cutting-edge restaurants and culinary innovation</div>
+        <div class="highlight">Walking distance to major studios and production hubs</div>
+        <div class="highlight">Authentic creative community</div>
+      </div>
+    </div>
+
+    <div class="neighborhood-card">
+      <h3 class="neighborhood-name">Mid City</h3>
+      <div class="neighborhood-meta">Cultural Capital · Urban Sophistication</div>
+      <p class="neighborhood-desc">LA's cultural epicenter combines world-class museums, galleries, and institutions with genuine neighborhood charm.</p>
+      <div class="neighborhood-highlights">
+        <div class="highlight">LACMA, the Broad, and the museum district</div>
+        <div class="highlight">Award-winning independent restaurants and cafés</div>
+        <div class="highlight">Walking access to premier shopping and transit</div>
+        <div class="highlight">Gateway to cultural Los Angeles</div>
+      </div>
+    </div>
+
+    <div class="neighborhood-card">
+      <h3 class="neighborhood-name">Mid-Wilshire</h3>
+      <div class="neighborhood-meta">Accessible Living · Community Focus</div>
+      <p class="neighborhood-desc">A welcoming neighborhood of tree-lined streets, authentic community, and accessible sophistication.</p>
+      <div class="neighborhood-highlights">
+        <div class="highlight">Excellent public transit and downtown access</div>
+        <div class="highlight">Proximity to major employment centers</div>
+        <div class="highlight">Neighborhood restaurants and genuine character</div>
+        <div class="highlight">True LA living, authentically neighborly</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-line"></div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-visual reveal">
+    <div class="about-img-main">
+      <div style="text-align:center;opacity:0.25;">
+        <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="20" y="40" width="80" height="60" stroke="#c9a84c" stroke-width="0.8"/>
+          <rect x="35" y="55" width="20" height="25" stroke="#c9a84c" stroke-width="0.6"/>
+          <rect x="65" y="55" width="20" height="25" stroke="#c9a84c" stroke-width="0.6"/>
+          <polyline points="10,40 60,10 110,40" stroke="#c9a84c" stroke-width="0.8"/>
+          <line x1="60" y1="10" x2="60" y2="0" stroke="#c9a84c" stroke-width="0.8"/>
+          <circle cx="60" cy="0" r="3" fill="#c9a84c" opacity="0.5"/>
+        </svg>
+      </div>
+    </div>
+    <div class="about-img-accent"></div>
+    <div class="about-img-label">LA</div>
+  </div>
+
+  <div class="about-content reveal">
+    <div class="section-eyebrow">Our Story</div>
+    <h2 class="section-title">Built for how<br>professionals <em>live</em></h2>
+    <p>
+      Proper Holdings was founded on a single principle: corporate housing shouldn't feel corporate. For over five years, we've been quietly building a portfolio of carefully furnished residences across Los Angeles — each one designed not just to house, but to genuinely accommodate the way modern professionals live and work.
+    </p>
+    <p>
+      We operate every unit directly, which means no middlemen, no inconsistency, and no compromises on quality. From the linens to the WiFi, everything is selected with intention.
+    </p>
+
+    <div class="about-values">
+      <div class="value-item">
+        <div class="value-title">Direct Management</div>
+        <div class="value-desc">Every unit operated in-house. One point of contact, total accountability.</div>
+      </div>
+      <div class="value-item">
+        <div class="value-title">Verified Quality</div>
+        <div class="value-desc">Consistent standards across all properties — not just at check-in.</div>
+      </div>
+      <div class="value-item">
+        <div class="value-title">Extended Stay Ready</div>
+        <div class="value-desc">Designed for 30–365+ night stays with everything in place.</div>
+      </div>
+      <div class="value-item">
+        <div class="value-title">LA Native</div>
+        <div class="value-desc">Deep local knowledge, neighborhood-level expertise, real connections.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-line"></div>
+
+<!-- ROOMS -->
+<section id="rooms" style="background: var(--off-white);">
+  <div class="section-header reveal">
+    <div class="section-eyebrow section-eyebrow--center">Living Experience</div>
+    <h2 class="section-title">Curated luxury<br><em>for extended stays</em></h2>
+    <p class="section-desc">Every residence is designed to feel like home. Thoughtfully furnished with premium finishes and everything needed for sophisticated, comfortable living.</p>
+  </div>
+
+  <div class="rooms-grid reveal">
+    <div class="room-visual">✨</div>
+    <div class="room-content">
+      <h3>Move-In Ready Elegance</h3>
+      <p class="room-desc">No compromises. No assembly. Every residence arrives perfectly appointed with curated furniture, premium linens, full kitchen, and luxury amenities. We handle the details so you experience the comfort.</p>
+      <div class="amenities">
+        <div class="amenity">Premium Egyptian cotton linens</div>
+        <div class="amenity">Fully equipped gourmet kitchen</div>
+        <div class="amenity">In-unit washer &amp; dryer</div>
+        <div class="amenity">High-speed WiFi &amp; smart TV</div>
+        <div class="amenity">Climate control &amp; blackout shades</div>
+        <div class="amenity">Designer furniture &amp; art</div>
+        <div class="amenity">Luxury bath amenities</div>
+        <div class="amenity">Personalized welcome package</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rooms-grid reveal" style="margin-top: 80px;">
+    <div class="room-content">
+      <h3>Extended Stay Excellence</h3>
+      <p class="room-desc">Designed for 30 days to a year or more. We understand that extended stays require more than housing — they require genuine hospitality. Dedicated workspace, flexible arrangements, and white-glove support ensure your stay transcends accommodation.</p>
+      <div class="amenities">
+        <div class="amenity">Professional workspace &amp; high-speed internet</div>
+        <div class="amenity">Concierge package services</div>
+        <div class="amenity">Flexible check-in and check-out</div>
+        <div class="amenity">24/7 dedicated concierge support</div>
+        <div class="amenity">Housekeeping packages available</div>
+        <div class="amenity">Pet-friendly accommodations</div>
+        <div class="amenity">Included secure parking</div>
+        <div class="amenity">Neighborhood guides &amp; insider tips</div>
+      </div>
+    </div>
+    <div class="room-visual">🏡</div>
+  </div>
+</section>
+
+<div class="gold-line"></div>
+
+<!-- BOOK -->
+<section id="book">
+  <div class="book-bg"></div>
+  <div class="book-divider"></div>
+  <h2 class="book-title reveal">
+    Your next stay<br>starts <em>here.</em>
+  </h2>
+  <p class="book-sub reveal">Available now across Los Angeles. Book instantly on your preferred platform, or contact us directly for corporate and extended-stay rates.</p>
+  <div class="book-platforms reveal">
+    <a href="#" class="book-platform-btn" onclick="openBookingModal(); return false;">
+      <span class="bpb-label">Book on Airbnb</span>
+      <span class="bpb-arrow">→</span>
+    </a>
+    <a href="#" class="book-platform-btn" onclick="openBookingModal(); return false;">
+      <span class="bpb-label">Book on VRBO</span>
+      <span class="bpb-arrow">→</span>
+    </a>
+    <a href="#" class="book-platform-btn" onclick="openBookingModal(); return false;">
+      <span class="bpb-label">FurnishedFinder</span>
+      <span class="bpb-arrow">→</span>
+    </a>
+  </div>
+  <p class="book-direct reveal">
+    Prefer to book direct? &nbsp;<a href="corporate.html#contact" class="book-direct-link">Contact us</a> — response within 2 hours.
+  </p>
+  <p style="font-family:'Montserrat',sans-serif;font-size:11px;color:#7a7672;margin-top:20px;" class="reveal">
+    Call us directly &nbsp;·&nbsp; <span style="color:var(--gold);">(213) 000-0000</span>
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <div class="footer-logo">Proper<span>.</span> Holdings</div>
+    <p class="footer-tagline">Corporate Housing, Elevated. Serving Los Angeles professionals with fully furnished, move-in ready residences.</p>
+    <div class="footer-divider"></div>
+    <p style="font-family:'Montserrat',sans-serif;font-size:11px;color:rgba(255,255,255,0.35);">Independently operated &amp; locally owned.</p>
+  </div>
+  <div>
+    <div class="footer-col-title">Navigate</div>
+    <ul class="footer-links">
+      <li><a href="#properties">Properties</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="corporate.html">Corporate</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#book">Book a Stay</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Platforms</div>
+    <ul class="footer-links">
+      <li><a href="#">Airbnb</a></li>
+      <li><a href="#">VRBO</a></li>
+      <li><a href="#">FurnishedFinder</a></li>
+      <li><a href="#">Direct Booking</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Contact</div>
+    <ul class="footer-links">
+      <li><a href="#">Los Angeles, CA</a></li>
+      <li><a href="#">(213) 000-0000</a></li>
+      <li><a href="#">hello@properholdings.com</a></li>
+      <li><a href="#">@properholdings</a></li>
+    </ul>
+  </div>
+</footer>
+<div class="footer-bottom">
+  <span class="footer-copy">© 2025 Proper Holdings. All rights reserved.</span>
+  <div class="footer-platforms">
+    <span class="platform-badge">Airbnb</span>
+    <span class="platform-badge">VRBO</span>
+    <span class="platform-badge">FurnishedFinder</span>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

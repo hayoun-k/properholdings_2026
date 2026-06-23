@@ -1,0 +1,57 @@
+---
+---
+
+<section id="cta">
+  <div class="section-tag">Exclusive Access</div>
+  <h2>Join our collection</h2>
+  <p class="cta-desc">
+    Secure access to curated residences, exclusive rates, and priority booking. Experience the
+    Proper Holdings distinction.
+  </p>
+  <div class="cta-buttons">
+    <button class="btn-primary" id="cta-book-btn">Book Now</button>
+    <button class="btn-secondary">Call (213) 000-0000</button>
+  </div>
+</section>
+
+<style>
+  #cta {
+    padding: 140px 80px;
+    background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+    color: white;
+    text-align: center;
+  }
+
+  #cta :global(h2) {
+    color: white;
+    margin-bottom: 28px;
+  }
+
+  #cta :global(.section-tag) {
+    color: var(--gold);
+  }
+
+  .cta-desc {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 680px;
+    margin: 0 auto 56px;
+    line-height: 1.9;
+  }
+
+  .cta-buttons {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+  }
+
+  @media (max-width: 1200px) {
+    .cta-buttons { flex-direction: column; align-items: center; }
+  }
+</style>
+
+<script>
+  document.getElementById('cta-book-btn')?.addEventListener('click', () => {
+    (window as any).openEmailPopup?.();
+  });
+</script>

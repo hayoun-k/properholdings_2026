@@ -1,0 +1,204 @@
+---
+interface Props {
+  title?: string;
+}
+const { title = "Proper Holdings — Luxury Corporate Residences in Los Angeles" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
+  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="5c2abca5-5ea3-4e6c-91ee-abade017e219";(function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.getElementsByTagName("head")[0].appendChild(s);})();</script>
+</html>
+
+<style is:global>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --white: #ffffff;
+    --cream: #faf8f6;
+    --off-white: #f5f3f0;
+    --light-gray: #e8e6e4;
+    --gray: #a0a0a0;
+    --dark-gray: #6b6b6b;
+    --charcoal: #2a2a2a;
+    --black: #000000;
+    --gold: #c9a84c;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Lora', serif;
+    background: var(--white);
+    color: var(--charcoal);
+    line-height: 1.9;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 76px;
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 32px;
+    color: var(--charcoal);
+    letter-spacing: -0.02em;
+  }
+
+  h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--charcoal);
+  }
+
+  h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 60px;
+    font-weight: 300;
+    margin-bottom: 32px;
+    color: var(--charcoal);
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+
+  h2 em {
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  section {
+    padding: 140px 80px;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 120px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section-tag {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .section-desc {
+    font-size: 17px;
+    color: var(--dark-gray);
+    line-height: 1.85;
+  }
+
+  .btn-primary {
+    background: var(--gold);
+    color: var(--charcoal);
+    padding: 14px 44px;
+    border: none;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .btn-primary:hover {
+    background: white;
+    color: var(--charcoal);
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: white;
+    padding: 14px 44px;
+    border: 1px solid white;
+    border-radius: 2px;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .btn-secondary:hover {
+    background: white;
+    color: var(--charcoal);
+  }
+
+  .btn-book {
+    background: var(--charcoal);
+    color: white;
+    padding: 13px 32px;
+    border-radius: 2px;
+    border: none;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .btn-book:hover {
+    background: var(--gold);
+    color: var(--charcoal);
+    transform: translateY(-1px);
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 1200px) {
+    section { padding: 100px 50px !important; }
+    .section-header { margin-bottom: 80px; }
+    h1 { font-size: 56px; }
+    h2 { font-size: 44px; }
+  }
+
+  @media (max-width: 768px) {
+    h1 { font-size: 42px; }
+    h2 { font-size: 32px; }
+    section { padding: 60px 28px !important; }
+    .section-header { margin-bottom: 60px; }
+  }
+</style>

@@ -1,0 +1,265 @@
+---
+import { Image } from 'astro:assets';
+import img_screenshot from '../assets/Screenshot 2026-04-06 at 01.56.56.webp';
+import img_7203 from '../assets/IMG_7203.webp';
+import img_0251 from '../assets/IMG_0251.webp';
+import img_0247 from '../assets/IMG_0247.webp';
+import img_0240 from '../assets/IMG_0240.webp';
+import img_0256 from '../assets/IMG_0256.webp';
+import img_0237 from '../assets/IMG_0237.webp';
+import img_0236 from '../assets/IMG_0236.webp';
+import img_0257 from '../assets/IMG_0257.webp';
+import img_0239 from '../assets/IMG_0239.webp';
+import img_0254 from '../assets/IMG_0254.webp';
+import img_0242 from '../assets/IMG_0242.webp';
+import img_0258 from '../assets/IMG_0258.webp';
+import img_0243 from '../assets/IMG_0243.webp';
+import img_0255 from '../assets/IMG_0255.webp';
+import img_0248 from '../assets/IMG_0248.webp';
+import img_0252 from '../assets/IMG_0252.webp';
+import img_0244 from '../assets/IMG_0244.webp';
+import img_0245 from '../assets/IMG_0245.webp';
+import img_0253 from '../assets/IMG_0253.webp';
+import img_0249 from '../assets/IMG_0249.webp';
+
+const row1 = [img_screenshot, img_7203, img_0251, img_0247, img_0240, img_0256, img_0237, img_0236, img_0257, img_0239, img_0254];
+const row2 = [img_0242, img_0258, img_0243, img_0255, img_0248, img_0252, img_0244, img_0245, img_0253, img_0249];
+
+const properties = [
+  {
+    tag: 'Premier · Beverly Hills',
+    name: 'Beverly Terrace',
+    beds: '1 Bedroom',
+    baths: '1 Bath',
+    sqft: '750 sq ft',
+  },
+  {
+    tag: 'Studio · West Hollywood',
+    name: 'WeHo Modern',
+    beds: 'Studio',
+    baths: '1 Bath',
+    sqft: '550 sq ft',
+  },
+  {
+    tag: 'Executive · Mid-Wilshire',
+    name: 'Mid-City Executive',
+    beds: '2 Bedrooms',
+    baths: '2 Baths',
+    sqft: '1,100 sq ft',
+  },
+];
+---
+
+<section id="properties">
+  <div class="section-header">
+    <div class="section-tag">Our Collection</div>
+    <h2>Handpicked residences<br />across Los Angeles</h2>
+    <p class="section-desc">
+      Each property reflects our commitment to elegance, comfort, and the discerning tastes of our
+      guests.
+    </p>
+  </div>
+
+  <div class="carousel-rows">
+    <div class="carousel-row">
+      <div class="carousel-track">
+        {[...row1, ...row1].map((src, i) => (
+          <div class="carousel-item" aria-hidden={i >= row1.length ? 'true' : undefined}>
+            <Image src={src} alt="" width={220} height={140} />
+          </div>
+        ))}
+      </div>
+    </div>
+    <div class="carousel-row">
+      <div class="carousel-track carousel-track--reverse">
+        {[...row2, ...row2].map((src, i) => (
+          <div class="carousel-item" aria-hidden={i >= row2.length ? 'true' : undefined}>
+            <Image src={src} alt="" width={220} height={140} />
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <div class="properties-grid">
+    {properties.map((p) => (
+      <div class="property-card">
+        <div class="property-image">🏡</div>
+        <div class="property-info">
+          <div class="property-tag">{p.tag}</div>
+          <h3 class="property-name">{p.name}</h3>
+          <div class="property-details">
+            <span>{p.beds}</span> • <span>{p.baths}</span> • <span>{p.sqft}</span>
+          </div>
+          <a href="#cta" class="book-link">Book Now</a>
+        </div>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  #properties {
+    background: var(--white);
+  }
+
+  .carousel-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 60px;
+    overflow: hidden;
+  }
+
+  .carousel-row {
+    overflow: hidden;
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 16px;
+    width: max-content;
+    animation: scrollLeft 40s linear infinite;
+    will-change: transform;
+  }
+
+  .carousel-track--reverse {
+    animation: scrollRight 44s linear infinite;
+  }
+
+  .carousel-item {
+    width: 220px;
+    height: 140px;
+    border-radius: 2px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  @keyframes scrollLeft {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes scrollRight {
+    0%   { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+
+  .carousel-rows:hover .carousel-track {
+    animation-play-state: paused;
+  }
+
+  .properties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 100px;
+  }
+
+  .property-card {
+    background: var(--white);
+    border-radius: 2px;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid #e0dcd8;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .property-card:hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+    transform: translateY(-12px);
+    border-color: var(--charcoal);
+  }
+
+  .property-image {
+    width: 100%;
+    height: 380px;
+    background: linear-gradient(135deg, #e8e6e4 0%, #dcdad6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.08);
+    font-size: 110px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .property-image::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(0,0,0,0.02)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  }
+
+  .property-info {
+    padding: 48px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .property-tag {
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .property-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--charcoal);
+  }
+
+  .property-details {
+    display: flex;
+    gap: 20px;
+    font-size: 12px;
+    color: var(--gray);
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .book-link {
+    display: inline-block;
+    margin-top: auto;
+    color: var(--charcoal);
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    border-bottom: 1px solid var(--charcoal);
+    padding-bottom: 6px;
+  }
+
+  .book-link:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  @media (max-width: 1200px) {
+    .properties-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (max-width: 768px) {
+    .properties-grid { grid-template-columns: 1fr; }
+  }
+</style>

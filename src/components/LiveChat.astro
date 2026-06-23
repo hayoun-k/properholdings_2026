@@ -1,0 +1,213 @@
+---
+---
+
+<div id="live-chat-widget">
+  <button id="chat-toggle">?</button>
+
+  <div id="chat-box">
+    <div class="chat-header">
+      <h3>Concierge</h3>
+      <button id="chat-close">✕</button>
+    </div>
+
+    <div id="chat-messages">
+      <div class="chat-bubble chat-bubble--bot">Good day. How may we assist with your stay?</div>
+    </div>
+
+    <div class="chat-input-row">
+      <input type="text" id="chat-input" placeholder="Message..." />
+      <button id="chat-send">Send</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  #live-chat-widget {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 999;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  #chat-toggle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--charcoal);
+    border: none;
+    cursor: pointer;
+    color: var(--gold);
+    font-size: 24px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+  }
+
+  #chat-box {
+    position: absolute;
+    bottom: 85px;
+    right: 0;
+    width: 380px;
+    height: 540px;
+    background: white;
+    border-radius: 2px;
+    box-shadow: 0 16px 60px rgba(0, 0, 0, 0.3);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid #e0dcd8;
+  }
+
+  #chat-box.open {
+    display: flex;
+  }
+
+  .chat-header {
+    background: var(--charcoal);
+    color: white;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .chat-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  #chat-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+
+  #chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .chat-bubble {
+    padding: 12px 16px;
+    border-radius: 2px;
+    max-width: 85%;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .chat-bubble--bot {
+    background: var(--off-white);
+    color: var(--charcoal);
+  }
+
+  .chat-bubble--user {
+    background: var(--charcoal);
+    color: white;
+    align-self: flex-end;
+  }
+
+  .chat-input-row {
+    padding: 18px;
+    border-top: 1px solid #e0dcd8;
+    display: flex;
+    gap: 8px;
+  }
+
+  #chat-input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #d0ccc8;
+    border-radius: 2px;
+    font-size: 13px;
+    font-family: 'Lora', serif;
+    outline: none;
+    transition: border-color 0.3s;
+    color: var(--charcoal);
+  }
+
+  #chat-input:focus {
+    border-color: var(--charcoal);
+  }
+
+  #chat-send {
+    background: var(--charcoal);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    padding: 10px 18px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+  }
+
+  #chat-send:hover {
+    background: var(--gold);
+    color: var(--charcoal);
+  }
+</style>
+
+<script>
+  const chatToggle = document.getElementById('chat-toggle')!;
+  const chatBox = document.getElementById('chat-box')!;
+  const chatClose = document.getElementById('chat-close')!;
+  const chatInput = document.getElementById('chat-input') as HTMLInputElement;
+  const chatSend = document.getElementById('chat-send')!;
+  const chatMessages = document.getElementById('chat-messages')!;
+
+  const botResponses = [
+    'Excellent question. Our concierge team would be delighted to assist.',
+    "I'll connect you with our reservations specialist immediately.",
+    "Tell us more about your needs and we'll curate the perfect residence.",
+    'We have premier residences available in Beverly Hills, West Hollywood, Mid City, and Mid-Wilshire.',
+    'Ready to book? Our team can accommodate your preferred dates and neighborhood.',
+  ];
+
+  chatToggle.addEventListener('click', () => {
+    chatBox.classList.toggle('open');
+  });
+
+  chatClose.addEventListener('click', () => {
+    chatBox.classList.remove('open');
+  });
+
+  function sendMessage() {
+    const message = chatInput.value.trim();
+    if (!message) return;
+
+    const userBubble = document.createElement('div');
+    userBubble.className = 'chat-bubble chat-bubble--user';
+    userBubble.textContent = message;
+    chatMessages.appendChild(userBubble);
+
+    chatInput.value = '';
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
+    setTimeout(() => {
+      const botBubble = document.createElement('div');
+      botBubble.className = 'chat-bubble chat-bubble--bot';
+      botBubble.textContent = botResponses[Math.floor(Math.random() * botResponses.length)];
+      chatMessages.appendChild(botBubble);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 800);
+  }
+
+  chatSend.addEventListener('click', sendMessage);
+  chatInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') sendMessage();
+  });
+</script>

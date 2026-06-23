@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proper Holdings — Luxury Corporate Residences in Los Angeles</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Montserrat:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    :root {
+      --white: #ffffff;
+      --cream: #faf8f6;
+      --off-white: #f5f3f0;
+      --light-gray: #e8e6e4;
+      --gray: #a0a0a0;
+      --dark-gray: #6b6b6b;
+      --charcoal: #2a2a2a;
+      --black: #000000;
+      --gold: #c9a84c;
+    }
+    
+    html { scroll-behavior: smooth; }
+    
+    body {
+      font-family: 'Lora', serif;
+      background: var(--white);
+      color: var(--charcoal);
+      line-height: 1.9;
+      font-size: 16px;
+      font-weight: 400;
+    }
+    
+    /* HEADER & NAV */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255,255,255,0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid #e0dcd8;
+      z-index: 100;
+      padding: 22px 80px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .logo-section {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-decoration: none;
+      color: var(--charcoal);
+    }
+    
+    .logo-text {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--charcoal);
+      text-transform: uppercase;
+    }
+    
+    nav {
+      display: flex;
+      gap: 50px;
+      list-style: none;
+    }
+    
+    nav a {
+      text-decoration: none;
+      color: var(--charcoal);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.3s;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    nav a:hover { color: var(--gray); }
+    
+    .btn-book {
+      background: var(--charcoal);
+      color: white;
+      padding: 13px 32px;
+      border-radius: 2px;
+      border: none;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .btn-book:hover { 
+      background: var(--gold);
+      color: var(--charcoal);
+      transform: translateY(-1px);
+    }
+    
+    /* HERO SECTION */
+    #hero {
+      margin-top: 70px;
+      padding: 0;
+      background: linear-gradient(135deg, var(--white) 0%, var(--cream) 100%);
+      display: flex;
+      align-items: stretch;
+      justify-content: space-between;
+      min-height: 95vh;
+      position: relative;
+    }
+    
+    .hero-content {
+      flex: 1;
+      padding: 120px 80px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 700px;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .hero-tag {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 32px;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 76px;
+      font-weight: 300;
+      line-height: 1.1;
+      margin-bottom: 32px;
+      color: var(--charcoal);
+      letter-spacing: -0.02em;
+    }
+    
+    h1 em { font-style: italic; font-weight: 400; color: var(--charcoal); }
+    
+    .hero-desc {
+      font-size: 17px;
+      color: var(--dark-gray);
+      line-height: 1.85;
+      margin-bottom: 56px;
+      max-width: 540px;
+    }
+    
+    .hero-stats {
+      display: flex;
+      gap: 80px;
+      margin-bottom: 56px;
+    }
+    
+    .stat { }
+    .stat-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--charcoal);
+      line-height: 1;
+    }
+    
+    .stat-label {
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin-top: 12px;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .hero-visual {
+      flex: 1;
+      background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(201,168,76,0.1);
+      font-size: 150px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.02)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    }
+    
+    /* SECTIONS */
+    section {
+      padding: 140px 80px;
+    }
+    
+    .section-header {
+      text-align: center;
+      margin-bottom: 120px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .section-tag {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+      font-weight: 600;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 60px;
+      font-weight: 300;
+      margin-bottom: 32px;
+      color: var(--charcoal);
+      letter-spacing: -0.02em;
+      line-height: 1.15;
+    }
+    
+    h2 em { font-style: italic; font-weight: 400; }
+    
+    .section-desc {
+      font-size: 17px;
+      color: var(--dark-gray);
+      line-height: 1.85;
+    }
+    
+    /* CORPORATE HOUSING */
+    #corporate {
+      background: var(--white);
+    }
+    
+    .market-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 50px;
+      margin-bottom: 100px;
+    }
+    
+    .market-card {
+      background: var(--white);
+      border: 1px solid #e0dcd8;
+      padding: 56px 48px;
+      border-radius: 2px;
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+    }
+    
+    .market-card:hover {
+      border-color: var(--charcoal);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+      transform: translateY(-8px);
+    }
+    
+    .market-icon {
+      font-size: 40px;
+      margin-bottom: 24px;
+      display: block;
+    }
+    
+    .market-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 26px;
+      margin-bottom: 16px;
+      color: var(--charcoal);
+      font-weight: 400;
+    }
+    
+    .market-card p {
+      font-size: 15px;
+      color: var(--dark-gray);
+      line-height: 1.85;
+    }
+    
+    .corporate-features {
+      background: var(--cream);
+      padding: 100px 80px;
+      border-radius: 2px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 60px;
+      border: 1px solid #e0dcd8;
+    }
+    
+    .feature {
+      text-align: center;
+    }
+    
+    .feature-icon {
+      font-size: 36px;
+      margin-bottom: 20px;
+      display: block;
+    }
+    
+    .feature h4 {
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: var(--charcoal);
+      letter-spacing: 0.1em;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+    }
+    
+    .feature p {
+      font-size: 14px;
+      color: var(--dark-gray);
+      line-height: 1.8;
+    }
+    
+    /* PROPERTIES */
+    #properties {
+      background: var(--white);
+    }
+    
+    .properties-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin-top: 100px;
+    }
+    
+    .property-card {
+      background: var(--white);
+      border-radius: 2px;
+      overflow: hidden;
+      transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      border: 1px solid #e0dcd8;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .property-card:hover {
+      box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+      transform: translateY(-12px);
+      border-color: var(--charcoal);
+    }
+    
+    .property-image {
+      width: 100%;
+      height: 380px;
+      background: linear-gradient(135deg, #e8e6e4 0%, #dcdad6 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(0,0,0,0.08);
+      font-size: 110px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .property-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(0,0,0,0.02)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    }
+    
+    .property-info {
+      padding: 48px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .property-tag {
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 12px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .property-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 400;
+      margin-bottom: 12px;
+      color: var(--charcoal);
+    }
+    
+    .property-details {
+      display: flex;
+      gap: 20px;
+      font-size: 12px;
+      color: var(--gray);
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .book-link {
+      display: inline-block;
+      margin-top: auto;
+      color: var(--charcoal);
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s;
+      font-family: 'Montserrat', sans-serif;
+      border-bottom: 1px solid var(--charcoal);
+      padding-bottom: 6px;
+    }
+    
+    .book-link:hover { 
+      color: var(--gold);
+      border-bottom-color: var(--gold);
+    }
+    
+    /* NEIGHBORHOODS */
+    #neighborhoods {
+      background: var(--cream);
+    }
+    
+    .neighborhoods-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 80px;
+      margin-top: 100px;
+    }
+    
+    .neighborhood-card {
+      background: var(--white);
+      padding: 64px;
+      border-radius: 2px;
+      transition: all 0.5s;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+      border: 1px solid #e0dcd8;
+    }
+    
+    .neighborhood-card:hover {
+      box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+      transform: translateY(-6px);
+    }
+    
+    .neighborhood-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 36px;
+      font-weight: 400;
+      color: var(--charcoal);
+      margin-bottom: 12px;
+    }
+    
+    .neighborhood-meta {
+      font-size: 10px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 28px;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .neighborhood-desc {
+      font-size: 16px;
+      color: var(--dark-gray);
+      line-height: 1.9;
+      margin-bottom: 32px;
+    }
+    
+    .neighborhood-highlights {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    
+    .highlight {
+      font-size: 14px;
+      color: var(--charcoal);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    
+    .highlight::before {
+      content: '—';
+      color: var(--gold);
+      font-weight: 300;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    
+    /* ROOMS */
+    #rooms {
+      background: var(--white);
+    }
+    
+    .rooms-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 100px;
+      margin-top: 100px;
+      align-items: center;
+    }
+    
+    .room-visual {
+      height: 520px;
+      background: linear-gradient(135deg, #3a3a3a 0%, #2a2a2a 100%);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(201,168,76,0.12);
+      font-size: 130px;
+      border: 1px solid #4a4a4a;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .room-visual::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(201,168,76,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    }
+    
+    .room-content h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      color: var(--charcoal);
+      margin-bottom: 28px;
+      font-weight: 400;
+    }
+    
+    .room-desc {
+      font-size: 16px;
+      color: var(--dark-gray);
+      line-height: 1.95;
+      margin-bottom: 36px;
+    }
+    
+    .amenities {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 32px;
+    }
+    
+    .amenity {
+      font-size: 14px;
+      color: var(--charcoal);
+      padding: 16px 18px;
+      background: var(--cream);
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid #e0dcd8;
+      transition: all 0.3s;
+    }
+    
+    .amenity:hover {
+      border-color: var(--charcoal);
+      background: var(--off-white);
+    }
+    
+    .amenity::before {
+      content: '•';
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    
+    /* TESTIMONIALS */
+    #testimonials {
+      background: var(--cream);
+    }
+    
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+      margin-top: 100px;
+    }
+    
+    .testimonial {
+      background: var(--white);
+      padding: 56px;
+      border-radius: 2px;
+      border: 1px solid #e0dcd8;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+      transition: all 0.3s;
+    }
+    
+    .testimonial:hover {
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+      border-color: var(--charcoal);
+    }
+    
+    .stars {
+      color: var(--gold);
+      font-size: 13px;
+      letter-spacing: 4px;
+      margin-bottom: 24px;
+    }
+    
+    .testimonial-text {
+      font-size: 16px;
+      color: var(--charcoal);
+      line-height: 1.85;
+      margin-bottom: 32px;
+      font-style: italic;
+      font-weight: 500;
+    }
+    
+    .testimonial-author {
+      border-top: 1px solid #e0dcd8;
+      padding-top: 24px;
+    }
+    
+    .author-name {
+      font-weight: 600;
+      color: var(--charcoal);
+      font-size: 12px;
+      font-family: 'Montserrat', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+    
+    .author-role {
+      font-size: 12px;
+      color: var(--gold);
+      margin-top: 6px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 500;
+    }
+    
+    /* MAP */
+    #map {
+      background: var(--white);
+    }
+    
+    #map-container {
+      width: 100%;
+      height: 540px;
+      border-radius: 2px;
+      margin-top: 80px;
+      background: linear-gradient(135deg, #dcdad6 0%, #c8c4c0 100%);
+      border: 1px solid #d0ccc8;
+    }
+    
+    /* READY TO BOOK */
+    #ready-to-book {
+      background: var(--cream);
+      text-align: center;
+    }
+    
+    /* EMAIL POPUP */
+    .email-popup {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.65);
+      z-index: 200;
+      align-items: center;
+      justify-content: center;
+      animation: fadeIn 0.4s ease;
+    }
+    
+    .email-popup.active { display: flex; }
+    
+    .popup-content {
+      background: var(--white);
+      padding: 80px 70px;
+      border-radius: 2px;
+      max-width: 540px;
+      position: relative;
+      animation: slideUp 0.4s ease;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+      border: 1px solid #e0dcd8;
+    }
+    
+    .popup-close {
+      position: absolute;
+      top: 28px;
+      right: 28px;
+      background: none;
+      border: none;
+      font-size: 24px;
+      cursor: pointer;
+      color: var(--gray);
+      transition: color 0.3s;
+    }
+    
+    .popup-close:hover { color: var(--charcoal); }
+    
+    .popup-content h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 40px;
+      color: var(--charcoal);
+      margin-bottom: 16px;
+      font-weight: 400;
+    }
+    
+    .popup-content p {
+      font-size: 15px;
+      color: var(--dark-gray);
+      line-height: 1.85;
+      margin-bottom: 36px;
+    }
+    
+    .popup-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+    
+    .popup-input {
+      padding: 14px 20px;
+      border: 1px solid #d0ccc8;
+      border-radius: 2px;
+      font-size: 14px;
+      font-family: 'Lora', serif;
+      transition: all 0.3s;
+      color: var(--charcoal);
+      background: var(--white);
+    }
+    
+    .popup-input:focus {
+      outline: none;
+      border-color: var(--charcoal);
+      background: var(--cream);
+    }
+    
+    .popup-btn {
+      background: var(--charcoal);
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 2px;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: 'Montserrat', sans-serif;
+      margin-top: 8px;
+    }
+    
+    .popup-btn:hover { 
+      background: var(--gold);
+      color: var(--charcoal);
+    }
+    
+    /* CTA SECTION */
+    #cta {
+      padding: 140px 80px;
+      background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+      color: white;
+      text-align: center;
+    }
+    
+    #cta h2 {
+      color: white;
+      margin-bottom: 28px;
+    }
+    
+    #cta .section-tag {
+      color: var(--gold);
+    }
+    
+    .cta-desc {
+      font-size: 16px;
+      color: rgba(255,255,255,0.85);
+      max-width: 680px;
+      margin: 0 auto 56px;
+      line-height: 1.9;
+    }
+    
+    .cta-buttons {
+      display: flex;
+      gap: 28px;
+      justify-content: center;
+    }
+    
+    .btn-primary {
+      background: var(--gold);
+      color: var(--charcoal);
+      padding: 14px 44px;
+      border: none;
+      border-radius: 2px;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .btn-primary:hover { 
+      background: white;
+      color: var(--charcoal);
+      transform: translateY(-2px);
+    }
+    
+    .btn-secondary {
+      background: transparent;
+      color: white;
+      padding: 14px 44px;
+      border: 1px solid white;
+      border-radius: 2px;
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .btn-secondary:hover {
+      background: white;
+      color: var(--charcoal);
+    }
+    
+    /* FOOTER */
+    footer {
+      background: var(--charcoal);
+      color: white;
+      padding: 100px 80px 60px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 70px;
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    
+    .footer-col h4 {
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 32px;
+      color: var(--gold);
+      font-family: 'Montserrat', sans-serif;
+    }
+    
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    
+    .footer-col a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.3s;
+    }
+    
+    .footer-col a:hover { color: var(--gold); }
+    
+    .footer-tagline {
+      font-size: 14px;
+      color: rgba(255,255,255,0.8);
+      line-height: 1.85;
+      margin-bottom: 28px;
+    }
+    
+    /* ANIMATIONS */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* RESPONSIVE */
+    @media (max-width: 1200px) {
+      header { padding: 18px 50px; }
+      section { padding: 100px 50px !important; }
+      nav { gap: 30px; }
+      .section-header { margin-bottom: 80px; }
+      .properties-grid, .market-grid { grid-template-columns: repeat(2, 1fr); }
+      .neighborhoods-grid, .testimonials-grid { grid-template-columns: 1fr; }
+      .corporate-features { grid-template-columns: repeat(2, 1fr); }
+      .rooms-grid { grid-template-columns: 1fr; gap: 60px; }
+      .cta-buttons { flex-direction: column; }
+      footer { grid-template-columns: repeat(2, 1fr); padding: 80px 50px 50px; }
+      h1 { font-size: 56px; }
+      h2 { font-size: 44px; }
+    }
+    
+    @media (max-width: 768px) {
+      header { padding: 16px 28px; }
+      nav { display: none; }
+      .btn-book { width: 100%; }
+      #hero { flex-direction: column; }
+      .hero-content { padding: 60px 28px; }
+      .hero-visual { height: 320px; }
+      h1 { font-size: 42px; }
+      h2 { font-size: 32px; }
+      section { padding: 60px 28px !important; }
+      .section-header { margin-bottom: 60px; }
+      .properties-grid, .market-grid, .testimonials-grid { grid-template-columns: 1fr; }
+      .neighborhoods-grid, .rooms-grid { grid-template-columns: 1fr; }
+      .corporate-features { grid-template-columns: 1fr; padding: 60px 40px; }
+      .hero-stats { flex-direction: column; gap: 40px; }
+      footer { grid-template-columns: 1fr; padding: 60px 28px; }
+      .popup-content { padding: 60px 36px; }
+      .market-grid { gap: 32px; }
+      .neighborhoods-grid { gap: 40px; }
+      nav { font-size: 11px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo-section">
+      <div class="logo-text">Proper Holdings</div>
+    </div>
+    <nav>
+      <a href="#corporate">Corporate</a>
+      <a href="#properties">Residences</a>
+      <a href="#neighborhoods">Neighborhoods</a>
+      <a href="#rooms">Amenities</a>
+      <a href="#testimonials">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="btn-book">Book Now</button>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <div class="hero-tag">Luxury Corporate Residences</div>
+      <h1>Where sophistication<br>meets belonging.</h1>
+      <p class="hero-desc">Curated residences in Los Angeles for discerning professionals. Experience genuine hospitality in every thoughtfully designed detail.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-num">500+</div>
+          <div class="stat-label">Guests Served</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">98%</div>
+          <div class="stat-label">Satisfaction</div>
+        </div>
+        <div class="stat">
+          <div class="stat-num">4</div>
+          <div class="stat-label">Prime Neighborhoods</div>
+        </div>
+      </div>
+      <button class="btn-primary" onclick="document.getElementById('properties').scrollIntoView({behavior:'smooth'})" style="display: inline-block; padding: 13px 40px; text-decoration: none; color: var(--charcoal); width: auto;">Book Now</button>
+    </div>
+    <div class="hero-visual">🏠</div>
+  </section>
+
+  <!-- CORPORATE HOUSING -->
+  <section id="corporate">
+    <div class="section-header">
+      <div class="section-tag">Corporate Solutions</div>
+      <h2>Tailored for the way<br>you live and work</h2>
+      <p class="section-desc">Whether you're relocating, on assignment, or seeking a home away from home, we provide luxury residences designed for distinguished professionals and their unique needs.</p>
+    </div>
+
+    <div class="market-grid">
+      <div class="market-card">
+        <span class="market-icon">🏥</span>
+        <h3>Healthcare Placements</h3>
+        <p>Luxury furnished residences for travel nurses and medical professionals on 13-week assignments. Comfort and professionalism in every detail.</p>
+      </div>
+      <div class="market-card">
+        <span class="market-icon">💼</span>
+        <h3>Executive Relocations</h3>
+        <p>Seamless temporary residences for senior professionals and executives. Bridge your arrival with uncompromising elegance and service.</p>
+      </div>
+      <div class="market-card">
+        <span class="market-icon">🎬</span>
+        <h3>Entertainment & Production</h3>
+        <p>Extended accommodations for cast, crew, and talent. Flexible arrangements with luxury comfort for on-location productions.</p>
+      </div>
+      <div class="market-card">
+        <span class="market-icon">🏢</span>
+        <h3>Project Placements</h3>
+        <p>Multiple-unit arrangements for construction teams and project groups. Premium accommodations designed for operational flexibility.</p>
+      </div>
+      <div class="market-card">
+        <span class="market-icon">🎓</span>
+        <h3>Academic Visitors</h3>
+        <p>Semester-long placements for faculty and researchers. Cultivated environments designed for intellectual work and genuine comfort.</p>
+      </div>
+      <div class="market-card">
+        <span class="market-icon">✈️</span>
+        <h3>Insurance Displacement</h3>
+        <p>Rapid, compassionate placement for displaced families. Emergency availability paired with genuine care and support.</p>
+      </div>
+    </div>
+
+    <div class="corporate-features">
+      <div class="feature">
+        <span class="feature-icon">✦</span>
+        <h4>Curated Spaces</h4>
+        <p>Every detail thoughtfully selected for distinguished guests seeking quality and elegance.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">✦</span>
+        <h4>24/7 Concierge</h4>
+        <p>White-glove service. Your dedicated team anticipates and handles every need.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">✦</span>
+        <h4>Flexible Terms</h4>
+        <p>Customize your stay with flexible arrangements designed around your timeline.</p>
+      </div>
+      <div class="feature">
+        <span class="feature-icon">✦</span>
+        <h4>Premium Experience</h4>
+        <p>More than housing. An experience of genuine hospitality and refined living.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROPERTIES -->
+  <section id="properties">
+    <div class="section-header">
+      <div class="section-tag">Our Collection</div>
+      <h2>Handpicked residences<br>across Los Angeles</h2>
+      <p class="section-desc">Each property reflects our commitment to elegance, comfort, and the discerning tastes of our guests.</p>
+    </div>
+
+    <div class="properties-grid">
+      <div class="property-card">
+        <div class="property-image">🏡</div>
+        <div class="property-info">
+          <div class="property-tag">Premier · Beverly Hills</div>
+          <h3 class="property-name">Beverly Terrace</h3>
+          <div class="property-details">
+            <span>1 Bedroom</span> • <span>1 Bath</span> • <span>750 sq ft</span>
+          </div>
+          <a href="#cta" class="book-link">Book Now</a>
+        </div>
+      </div>
+      <div class="property-card">
+        <div class="property-image">🏡</div>
+        <div class="property-info">
+          <div class="property-tag">Studio · West Hollywood</div>
+          <h3 class="property-name">WeHo Modern</h3>
+          <div class="property-details">
+            <span>Studio</span> • <span>1 Bath</span> • <span>550 sq ft</span>
+          </div>
+          <a href="#cta" class="book-link">Book Now</a>
+        </div>
+      </div>
+      <div class="property-card">
+        <div class="property-image">🏡</div>
+        <div class="property-info">
+          <div class="property-tag">Executive · Mid-Wilshire</div>
+          <h3 class="property-name">Mid-City Executive</h3>
+          <div class="property-details">
+            <span>2 Bedrooms</span> • <span>2 Baths</span> • <span>1,100 sq ft</span>
+          </div>
+          <a href="#cta" class="book-link">Book Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEIGHBORHOODS -->
+  <section id="neighborhoods">
+    <div class="section-header">
+      <div class="section-tag">Los Angeles Living</div>
+      <h2>Discover your<br>perfect neighborhood</h2>
+      <p class="section-desc">Each community offers its own character and culture. We help you find the neighborhood that matches your vision of Los Angeles living.</p>
+    </div>
+
+    <div class="neighborhoods-grid">
+      <div class="neighborhood-card">
+        <h3 class="neighborhood-name">Beverly Hills</h3>
+        <div class="neighborhood-meta">Iconic Luxury</div>
+        <p class="neighborhood-desc">The pinnacle of Los Angeles elegance. Beverly Hills offers world-class dining, exclusive shopping, and architectural grandeur. The natural choice for executives seeking the very best.</p>
+        <div class="neighborhood-highlights">
+          <div class="highlight">Michelin-starred restaurants and exclusive venues</div>
+          <div class="highlight">Proximity to entertainment industry epicenter</div>
+          <div class="highlight">Iconic cultural institutions and galleries</div>
+          <div class="highlight">The epitome of Los Angeles luxury</div>
+        </div>
+      </div>
+
+      <div class="neighborhood-card">
+        <h3 class="neighborhood-name">West Hollywood</h3>
+        <div class="neighborhood-meta">Creative Pulse</div>
+        <p class="neighborhood-desc">The artistic heart of Los Angeles pulses with creative energy. Trendy restaurants, galleries, and entertainment venues define this walkable, vibrant community for creative professionals.</p>
+        <div class="neighborhood-highlights">
+          <div class="highlight">Thriving nightlife and entertainment ecosystem</div>
+          <div class="highlight">Cutting-edge restaurants and culinary innovation</div>
+          <div class="highlight">Walking distance to major studios and production hubs</div>
+          <div class="highlight">Authentic creative community and culture</div>
+        </div>
+      </div>
+
+      <div class="neighborhood-card">
+        <h3 class="neighborhood-name">Mid City</h3>
+        <div class="neighborhood-meta">Cultural Capital</div>
+        <p class="neighborhood-desc">LA's cultural epicenter combines world-class museums, galleries, and institutions with genuine neighborhood charm. A sanctuary for cultured professionals seeking sophistication.</p>
+        <div class="neighborhood-highlights">
+          <div class="highlight">LACMA, the Broad, and the museum district</div>
+          <div class="highlight">Award-winning independent restaurants and cafés</div>
+          <div class="highlight">Walking access to premier shopping and transit</div>
+          <div class="highlight">Gateway to cultural Los Angeles</div>
+        </div>
+      </div>
+
+      <div class="neighborhood-card">
+        <h3 class="neighborhood-name">Mid-Wilshire</h3>
+        <div class="neighborhood-meta">Community Living</div>
+        <p class="neighborhood-desc">Tree-lined streets and authentic community charm. Mid-Wilshire offers genuine Los Angeles living with accessible sophistication and convenient access to the city's best.</p>
+        <div class="neighborhood-highlights">
+          <div class="highlight">Excellent public transit and downtown access</div>
+          <div class="highlight">Proximity to major employment centers</div>
+          <div class="highlight">Neighborhood restaurants and genuine character</div>
+          <div class="highlight">True LA living, authentically neighborly</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROOMS -->
+  <section id="rooms">
+    <div class="section-header">
+      <div class="section-tag">Living Experience</div>
+      <h2>Refined comfort<br>for extended stays</h2>
+      <p class="section-desc">Every residence is designed to feel like a refined home. Thoughtfully curated with premium finishes and everything needed for elegant, comfortable living.</p>
+    </div>
+
+    <div class="rooms-grid">
+      <div class="room-visual">✨</div>
+      <div class="room-content">
+        <h3>Move-In Ready Elegance</h3>
+        <p class="room-desc">No compromises. No assembly required. Every residence arrives perfectly appointed with curated furniture, Egyptian cotton linens, full kitchen, and luxury amenities. We handle the details so you experience the comfort.</p>
+        <div class="amenities">
+          <div class="amenity">Premium Egyptian cotton linens</div>
+          <div class="amenity">Fully equipped gourmet kitchen</div>
+          <div class="amenity">In-unit washer & dryer</div>
+          <div class="amenity">High-speed WiFi & smart TV</div>
+          <div class="amenity">Climate control & blackout shades</div>
+          <div class="amenity">Designer furniture & curated art</div>
+          <div class="amenity">Luxury bath amenities</div>
+          <div class="amenity">Personalized welcome package</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="rooms-grid" style="margin-top: 120px;">
+      <div class="room-content">
+        <h3>Extended Stay Excellence</h3>
+        <p class="room-desc">Designed for 30 days to a year or beyond. We understand that extended stays require more than housing—they require genuine hospitality. Dedicated workspace, flexible arrangements, and white-glove support.</p>
+        <div class="amenities">
+          <div class="amenity">Professional workspace & high-speed internet</div>
+          <div class="amenity">Concierge package services & storage</div>
+          <div class="amenity">Flexible check-in and check-out times</div>
+          <div class="amenity">24/7 dedicated concierge support</div>
+          <div class="amenity">Optional housekeeping packages</div>
+          <div class="amenity">Pet-friendly accommodations</div>
+          <div class="amenity">Included secure parking</div>
+          <div class="amenity">Neighborhood guides & insider tips</div>
+        </div>
+      </div>
+      <div class="room-visual">🏡</div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonials">
+    <div class="section-header">
+      <div class="section-tag">Guest Stories</div>
+      <h2>From our<br>valued guests</h2>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="testimonial-text">"I stayed for 8 weeks during my hospital rotation. The apartment was immaculate, beautifully appointed, and had everything I needed. Responsive, professional, and genuinely caring. I will absolutely return."</p>
+        <div class="testimonial-author">
+          <div class="author-name">Marcus T.</div>
+          <div class="author-role">Travel Nurse, ICU Specialist</div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="testimonial-text">"My company relocated me to LA. This residence was my home for three months while I apartment hunted. It felt like a luxury hotel merged with genuine home comfort. Seamless, impeccable."</p>
+        <div class="testimonial-author">
+          <div class="author-name">Sarah K.</div>
+          <div class="author-role">Senior Product Manager</div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <div class="stars">★ ★ ★ ★ ★</div>
+        <p class="testimonial-text">"The finest furnished housing in LA. Quality evident everywhere—from the linens to the art. Every detail curated with care. Communication and service exceptional from start to finish."</p>
+        <div class="testimonial-author">
+          <div class="author-name">James O.</div>
+          <div class="author-role">Consulting Director</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section id="map">
+    <div class="section-header">
+      <div class="section-tag">Service Area</div>
+      <h2>Excellence across<br>Los Angeles</h2>
+      <p class="section-desc">Beverly Hills • West Hollywood • Mid City • Mid-Wilshire</p>
+    </div>
+    <div id="map-container"></div>
+  </section>
+
+  <!-- READY TO BOOK -->
+  <section id="ready-to-book">
+    <div class="section-header" style="margin-bottom: 60px;">
+      <div class="section-tag">Begin Your Stay</div>
+      <h2>Experience luxury living<br>in Los Angeles</h2>
+      <p class="section-desc">Discover our collection of curated residences. Each fully appointed and ready for your arrival.</p>
+    </div>
+    <button class="btn-primary" onclick="openEmailPopup()" style="display: inline-block; padding: 13px 44px; text-decoration: none; color: var(--charcoal);">Book Now</button>
+  </section>
+
+  <!-- CTA -->
+  <section id="cta">
+    <div class="section-tag">Exclusive Access</div>
+    <h2>Join our collection</h2>
+    <p class="cta-desc">Secure access to curated residences, exclusive rates, and priority booking. Experience the Proper Holdings distinction.</p>
+    <div class="cta-buttons">
+      <button class="btn-primary" onclick="openEmailPopup()">Book Now</button>
+      <button class="btn-secondary">Call (213) 000-0000</button>
+    </div>
+  </section>
+
+  <!-- EMAIL POPUP -->
+  <div class="email-popup" id="emailPopup">
+    <div class="popup-content">
+      <button class="popup-close" onclick="closeEmailPopup()">✕</button>
+      <h3>Reserve Your Stay</h3>
+      <p>Join our curated collection. Receive exclusive rates, early access to premium residences, and white-glove booking service.</p>
+      <form class="popup-form" onsubmit="handleEmailSubmit(event)">
+        <input type="text" class="popup-input" placeholder="Your full name" required>
+        <input type="email" class="popup-input" placeholder="your@email.com" required>
+        <input type="tel" class="popup-input" placeholder="Phone number (optional)">
+        <button type="submit" class="popup-btn">Book Now</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <div class="footer-col">
+      <h4>Proper Holdings</h4>
+      <p class="footer-tagline">Luxury corporate residences across Los Angeles. Curated spaces for discerning professionals where hospitality meets sophistication.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#corporate">Corporate Solutions</a></li>
+        <li><a href="#properties">Our Residences</a></li>
+        <li><a href="#neighborhoods">Neighborhoods</a></li>
+        <li><a href="#testimonials">Guest Stories</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Stay Connected</h4>
+      <ul>
+        <li><a href="#cta">Book Now</a></li>
+        <li><a href="https://x.com" target="_blank">X (Twitter)</a></li>
+        <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+        <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+        <li><a href="https://tiktok.com" target="_blank">TikTok</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:(213)000-0000">(213) 000-0000</a></li>
+        <li><a href="mailto:hello@properholdings.com">hello@properholdings.com</a></li>
+        <li style="margin-top: 8px; color: rgba(255,255,255,0.8);">Los Angeles, CA</li>
+        <li style="margin-top: 24px;"><button onclick="openEmailPopup()" class="btn-primary" style="display: inline-block; padding: 10px 28px; text-decoration: none; color: var(--charcoal); border: none; cursor: pointer; font-size: 10px;">Book Now</button></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- LIVE CHAT -->
+  <div id="live-chat-widget" style="position: fixed; bottom: 32px; right: 32px; z-index: 999; font-family: 'Montserrat', sans-serif;">
+    <button id="chat-toggle" style="width: 60px; height: 60px; border-radius: 50%; background: var(--charcoal); border: none; cursor: pointer; color: var(--gold); font-size: 24px; box-shadow: 0 8px 32px rgba(0,0,0,0.25); transition: all 0.3s; display: flex; align-items: center; justify-content: center; font-weight: 600;">?</button>
+    
+    <div id="chat-box" style="position: absolute; bottom: 85px; right: 0; width: 380px; height: 540px; background: white; border-radius: 2px; box-shadow: 0 16px 60px rgba(0,0,0,0.3); display: none; flex-direction: column; overflow: hidden; border: 1px solid #e0dcd8;">
+      <div style="background: var(--charcoal); color: white; padding: 24px; display: flex; justify-content: space-between; align-items: center;">
+        <h3 style="margin: 0; font-size: 16px; font-weight: 600; font-family: 'Cormorant Garamond', serif;">Concierge</h3>
+        <button id="chat-close" style="background: none; border: none; color: white; font-size: 20px; cursor: pointer; font-weight: 600;">✕</button>
+      </div>
+      
+      <div id="chat-messages" style="flex: 1; overflow-y: auto; padding: 24px; display: flex; flex-direction: column; gap: 14px;">
+        <div style="background: var(--off-white); padding: 12px 16px; border-radius: 2px; max-width: 85%; font-size: 14px; color: var(--charcoal); line-height: 1.6;">
+          Good day. How may we assist with your stay?
+        </div>
+      </div>
+      
+      <div style="padding: 18px; border-top: 1px solid #e0dcd8; display: flex; gap: 8px;">
+        <input type="text" id="chat-input" placeholder="Message..." style="flex: 1; padding: 10px 14px; border: 1px solid #d0ccc8; border-radius: 2px; font-size: 13px; font-family: 'Lora', serif; outline: none; transition: border-color 0.3s; color: var(--charcoal);">
+        <button id="chat-send" style="background: var(--charcoal); color: white; border: none; border-radius: 2px; padding: 10px 18px; cursor: pointer; font-weight: 600; transition: all 0.3s; font-family: 'Montserrat', sans-serif; font-size: 12px;">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const chatToggle = document.getElementById('chat-toggle');
+    const chatBox = document.getElementById('chat-box');
+    const chatClose = document.getElementById('chat-close');
+    const chatInput = document.getElementById('chat-input');
+    const chatSend = document.getElementById('chat-send');
+    const chatMessages = document.getElementById('chat-messages');
+
+    chatToggle.addEventListener('click', () => {
+      chatBox.style.display = chatBox.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    chatClose.addEventListener('click', () => {
+      chatBox.style.display = 'none';
+    });
+
+    chatSend.addEventListener('click', sendMessage);
+    chatInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') sendMessage();
+    });
+
+    function sendMessage() {
+      const message = chatInput.value.trim();
+      if (!message) return;
+
+      const userMsg = document.createElement('div');
+      userMsg.style.cssText = 'background: var(--charcoal); color: white; padding: 12px 16px; border-radius: 2px; max-width: 85%; align-self: flex-end; font-size: 14px; line-height: 1.6;';
+      userMsg.textContent = message;
+      chatMessages.appendChild(userMsg);
+
+      chatInput.value = '';
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+
+      setTimeout(() => {
+        const botMsg = document.createElement('div');
+        botMsg.style.cssText = 'background: var(--off-white); padding: 12px 16px; border-radius: 2px; max-width: 85%; font-size: 14px; color: var(--charcoal); line-height: 1.6;';
+        const responses = [
+          'Excellent question. Our concierge team would be delighted to assist.',
+          'I\'ll connect you with our reservations specialist immediately.',
+          'Tell us more about your needs and we\'ll curate the perfect residence.',
+          'We have premier residences available in Beverly Hills, West Hollywood, Mid City, and Mid-Wilshire.',
+          'Ready to book? Our team can accommodate your preferred dates and neighborhood.'
+        ];
+        botMsg.textContent = responses[Math.floor(Math.random() * responses.length)];
+        chatMessages.appendChild(botMsg);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+      }, 800);
+    }
+
+    function openEmailPopup() {
+      document.getElementById('emailPopup').classList.add('active');
+    }
+
+    function closeEmailPopup() {
+      document.getElementById('emailPopup').classList.remove('active');
+    }
+
+    function handleEmailSubmit(e) {
+      e.preventDefault();
+      alert('Thank you for your interest. Our team will contact you shortly with exclusive rates and availability.');
+      closeEmailPopup();
+    }
+
+    document.getElementById('emailPopup').addEventListener('click', function(e) {
+      if (e.target === this) closeEmailPopup();
+    });
+
+    function initMap() {
+      const mapContainer = document.getElementById('map-container');
+      mapContainer.innerHTML = `
+        <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg, #dcdad6 0%, #c8c4c0 100%);border-radius:2px;">
+          <div style="text-align:center;color:#999;">
+            <p style="font-size:18px;margin-bottom:8px; font-family: 'Cormorant Garamond', serif;">📍 Service Area Map</p>
+            <p style="font-size:13px; font-family: 'Lora', serif;">Google Maps integration ready with API key</p>
+          </div>
+        </div>
+      `;
+    }
+
+    window.addEventListener('load', initMap);
+
+    document.querySelector('.btn-book').addEventListener('click', function() {
+      openEmailPopup();
+    });
+  </script>
+</body>
+</html>

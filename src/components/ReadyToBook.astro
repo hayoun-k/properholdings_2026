@@ -1,0 +1,28 @@
+---
+---
+
+<section id="ready-to-book">
+  <div class="section-header" style="margin-bottom: 60px;">
+    <div class="section-tag">Begin Your Stay</div>
+    <h2>Experience luxury living<br />in Los Angeles</h2>
+    <p class="section-desc">
+      Discover our collection of curated residences. Each fully appointed and ready for your arrival.
+    </p>
+  </div>
+  <button class="btn-primary rtb-btn" id="rtb-book-btn" style="display: inline-block; padding: 13px 44px; text-decoration: none; color: var(--charcoal);">
+    Book Now
+  </button>
+</section>
+
+<style>
+  #ready-to-book {
+    background: var(--cream);
+    text-align: center;
+  }
+</style>
+
+<script>
+  document.getElementById('rtb-book-btn')?.addEventListener('click', () => {
+    (window as any).openEmailPopup?.();
+  });
+</script>

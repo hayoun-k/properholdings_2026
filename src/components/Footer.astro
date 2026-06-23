@@ -1,0 +1,105 @@
+---
+---
+
+<footer id="contact">
+  <div class="footer-col">
+    <h4>Proper Holdings</h4>
+    <p class="footer-tagline">
+      Luxury corporate residences across Los Angeles. Curated spaces for discerning professionals
+      where hospitality meets sophistication.
+    </p>
+  </div>
+  <div class="footer-col">
+    <h4>Explore</h4>
+    <ul>
+      <li><a href="#corporate">Corporate Solutions</a></li>
+      <li><a href="#properties">Our Residences</a></li>
+      <li><a href="#neighborhoods">Neighborhoods</a></li>
+      <li><a href="#testimonials">Guest Stories</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Stay Connected</h4>
+    <ul>
+      <li><a href="#cta">Book Now</a></li>
+      <li><a href="https://x.com" target="_blank">X (Twitter)</a></li>
+      <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
+      <li><a href="https://facebook.com" target="_blank">Facebook</a></li>
+      <li><a href="https://tiktok.com" target="_blank">TikTok</a></li>
+    </ul>
+  </div>
+  <div class="footer-col">
+    <h4>Contact</h4>
+    <ul>
+      <li><a href="tel:(213)000-0000">(213) 000-0000</a></li>
+      <li><a href="mailto:hello@properholdings.com">hello@properholdings.com</a></li>
+      <li style="margin-top: 8px; color: rgba(255,255,255,0.8);">Los Angeles, CA</li>
+      <li style="margin-top: 24px;">
+        <button id="footer-book-btn" class="btn-primary" style="display: inline-block; padding: 10px 28px; text-decoration: none; color: var(--charcoal); border: none; cursor: pointer; font-size: 10px;">
+          Book Now
+        </button>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: var(--charcoal);
+    color: white;
+    padding: 100px 80px 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 70px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .footer-col h4 {
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 32px;
+    color: var(--gold);
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .footer-col ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .footer-col a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+
+  .footer-col a:hover {
+    color: var(--gold);
+  }
+
+  .footer-tagline {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.85;
+    margin-bottom: 28px;
+  }
+
+  @media (max-width: 1200px) {
+    footer { grid-template-columns: repeat(2, 1fr); padding: 80px 50px 50px; }
+  }
+
+  @media (max-width: 768px) {
+    footer { grid-template-columns: 1fr; padding: 60px 28px; }
+  }
+</style>
+
+<script>
+  document.getElementById('footer-book-btn')?.addEventListener('click', () => {
+    (window as any).openEmailPopup?.();
+  });
+</script>

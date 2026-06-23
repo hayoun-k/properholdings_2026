@@ -1,0 +1,19 @@
+name = "proper-holdings-booking"
+main = "src/index.ts"
+compatibility_date = "2024-09-23"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "proper-holdings-booking"
+database_id = "REPLACE_WITH_YOUR_D1_ID"
+
+# Secrets — set via: wrangler secret put STRIPE_SECRET_KEY
+# STRIPE_SECRET_KEY
+# STRIPE_WEBHOOK_SECRET
+
+[vars]
+ALLOWED_ORIGIN = "https://properholdings.com"
+
+[[triggers]]
+crons = ["0 */6 * * *"]

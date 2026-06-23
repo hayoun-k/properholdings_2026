@@ -1,0 +1,89 @@
+---
+---
+
+<header>
+  <div class="logo-section">
+    <div class="logo-text">Proper Holdings</div>
+  </div>
+  <nav>
+    <a href="#properties">Residences</a>
+    <a href="#neighborhoods">Neighborhoods</a>
+    <a href="#rooms">Amenities</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#corporate">Corporate</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <button class="btn-book" id="header-book-btn">Book Now</button>
+</header>
+
+<style>
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e0dcd8;
+    z-index: 100;
+    padding: 22px 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-section {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: var(--charcoal);
+  }
+
+  .logo-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    color: var(--charcoal);
+    text-transform: uppercase;
+  }
+
+  nav {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--charcoal);
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  nav a:hover {
+    color: var(--gray);
+  }
+
+  @media (max-width: 1200px) {
+    header { padding: 18px 50px; }
+    nav { gap: 30px; }
+  }
+
+  @media (max-width: 768px) {
+    header { padding: 16px 28px; }
+    nav { display: none; }
+    .btn-book { width: 100%; }
+  }
+</style>
+
+<script>
+  document.getElementById('header-book-btn')?.addEventListener('click', () => {
+    (window as any).openEmailPopup?.();
+  });
+</script>

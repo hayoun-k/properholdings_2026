@@ -1,0 +1,85 @@
+---
+const items = [
+  { text: '"Immaculate, beautifully appointed — had everything I needed."', author: 'Marcus T., Travel Nurse' },
+  { text: '"Felt like a luxury hotel merged with genuine home comfort."', author: 'Sarah K., Product Manager' },
+  { text: '"The finest furnished housing in LA. Every detail curated with care."', author: 'James O., Consulting Director' },
+  { text: '"Responsive, professional, and genuinely caring. I will absolutely return."', author: 'Marcus T., Travel Nurse' },
+  { text: '"Seamless, impeccable. My home for three months while I settled into LA."', author: 'Sarah K., Product Manager' },
+  { text: '"Communication and service exceptional from start to finish."', author: 'James O., Consulting Director' },
+];
+---
+
+<div class="proof-ticker" aria-hidden="true">
+  <div class="proof-track">
+    {items.map((item) => (
+      <>
+        <span class="proof-item">
+          <span class="proof-stars">★★★★★</span>
+          {item.text} — {item.author}
+        </span>
+        <span class="proof-sep">·</span>
+      </>
+    ))}
+    {/* duplicate for seamless loop */}
+    {items.map((item) => (
+      <>
+        <span class="proof-item">
+          <span class="proof-stars">★★★★★</span>
+          {item.text} — {item.author}
+        </span>
+        <span class="proof-sep">·</span>
+      </>
+    ))}
+  </div>
+</div>
+
+<style>
+  .proof-ticker {
+    background: var(--off-white);
+    border-top: 1px solid #e0dcd8;
+    border-bottom: 1px solid #e0dcd8;
+    overflow: hidden;
+    padding: 14px 0;
+  }
+
+  .proof-track {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    width: max-content;
+    animation: tickerScroll 60s linear infinite;
+    white-space: nowrap;
+  }
+
+  .proof-ticker:hover .proof-track {
+    animation-play-state: paused;
+  }
+
+  @keyframes tickerScroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  .proof-item {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--dark-gray);
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .proof-stars {
+    color: var(--gold);
+    font-style: normal;
+    font-size: 11px;
+    letter-spacing: 2px;
+    flex-shrink: 0;
+  }
+
+  .proof-sep {
+    color: #e0dcd8;
+    font-size: 20px;
+  }
+</style>
