@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService } from 'astro/config';
 
 // https://astro.build/config
 export default defineConfig({
@@ -7,5 +7,8 @@ export default defineConfig({
     build: {
       cssMinify: 'esbuild', // swap out lightningcss
     },
+  },
+  image: {
+    service: passthroughImageService()
   },
 });
